@@ -1,0 +1,28 @@
+Eslint---Code kalitesini artırmak için aşağıdaki komutları çalıştırıyoruz--
+
+- npm init -y --> package.json
+- npm install --save-dev eslint eslint-config-prettier prettier
+- npx eslint --init 
+    -> To check syntax, find problems, and enforce code style
+    -> JavaScript modules (import/export)
+    -> None of these
+    -> No
+    -> browser, node
+    -> guide
+    -> airbnb
+    -> JSON
+
+# eslintrc.json dosyasına giriyoruz.
+    =>"rules": {
+        "no-console":"off"
+        }
+    en sona burayı ekliyoruz.
+
+Prettier-- Ana çalışma Klasör içerisindeyiz;
+- .prettierrc isimli yeni bir dosya oluşturuyoruz. 
+- => {
+    "singleQuote": true
+    }
+
+
+
