@@ -279,21 +279,97 @@
   // console.log(user[propName]);
 }
 
-const user = {
-  userName: 'cılgınCocuk',
-  userPass: 'ABC123',
-  age: 15,
-  //   login: function () {
-  //     console.log(this.userName + ' logged in');
-  //   },
-  login() {
-    console.log(this.userName + ' logged in');
-  },
-  newNickName(nick) {
-    console.log(this.userName + ' changing Nickname to: ' + nick);
-  },
-};
+// const user = {
+//   userName: 'cılgınCocuk',
+//   userPass: 'ABC123',
+//   age: 15,
+//   //   login: function () {
+//   //     console.log(this.userName + ' logged in');
+//   //   },
+//   login() {
+//     console.log(this.userName + ' logged in');
+//   },
+//   newNickName(nick) {
+//     console.log(this.userName + ' changing Nickname to: ' + nick);
+//   },
+// };
 
-// console.log(user.userName);
-user.login();
-user.newNickName('hacker çocuk');
+// // console.log(user.userName);
+// user.login();
+// user.newNickName('hacker çocuk');
+
+// const user = {
+//   userName: '',
+//   userPass: '',
+//   age: 0,
+//   login() {
+//     console.log(this.userName + ' logged in');
+//   },
+//   newNickName(nick) {
+//     this.userName = nick;
+//   },
+// };
+
+// //ARRAY OF OBJECT
+{
+  // const userArray = [];
+  // const myUser1 = user;
+  // const myUser2 = user;
+  // myUser1.userName = 'Ayşe';
+  // myUser1.userPass = 1234;
+  // myUser1.age = 22;
+  // console.log(myUser1);
+  // myUser2.userName = 'ddddd';
+  // myUser2.userPass = 'dfsgsg';
+  // myUser2.age = 26;
+  // console.log(myUser2);
+  // userArray.push(myUser1);
+  // userArray.push(myUser2);
+  // console.log(userArray);
+}
+
+// CLASS
+
+// const user = {
+//   userName: '',
+//   userPass: '',
+//   age: 0,
+//   login() {
+//     console.log(this.userName + ' logged in');
+//   },
+//   newNickName(nick) {
+//     this.userName = nick;
+//   },
+// };
+
+class User {
+  constructor(param) {
+    this.userName = param.name;
+    this.userPassword = param.password;
+    this.userAge = param.age;
+    this.userCity = param.city;
+  }
+
+  login() {
+    console.log(this.userName + ' logged in!');
+  }
+}
+
+const myUser_1 = new User({
+  name: 'Ali',
+  password: 1234,
+  age: 23,
+  city: 'izmir',
+});
+const myUser_2 = new User({
+  name: 'Veli',
+  password: 'qwerr',
+  age: 33,
+  city: 'ankara',
+});
+
+console.log(myUser_1);
+console.log(myUser_2);
+
+myUser_1.login();
+myUser_2.login();
