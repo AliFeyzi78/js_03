@@ -342,34 +342,252 @@
 //   },
 // };
 
-class User {
-  constructor(param) {
-    this.userName = param.name;
-    this.userPassword = param.password;
-    this.userAge = param.age;
-    this.userCity = param.city;
-  }
+// class User {
+//   constructor(param) {
+//     this.userName = param.name;
+//     this.userPassword = param.password;
+//     this.userAge = param.age;
+//     this.userCity = param.city;
+//   }
 
-  login() {
-    console.log(this.userName + ' logged in!');
-  }
-}
+//   login() {
+//     console.log(this.userName + ' logged in!');
+//   }
+// }
 
-const myUser_1 = new User({
-  name: 'Ali',
-  password: 1234,
-  age: 23,
-  city: 'izmir',
-});
-const myUser_2 = new User({
-  name: 'Veli',
-  password: 'qwerr',
-  age: 33,
-  city: 'ankara',
-});
+// const myUser_1 = new User({
+//   name: 'Ali',
+//   password: 1234,
+//   age: 23,
+//   city: 'izmir',
+// });
+// const myUser_2 = new User({
+//   name: 'Veli',
+//   password: 'qwerr',
+//   age: 33,
+//   city: 'ankara',
+// });
 
-console.log(myUser_1);
-console.log(myUser_2);
+// console.log(myUser_1);
+// console.log(myUser_2);
 
-myUser_1.login();
-myUser_2.login();
+// myUser_1.login();
+// myUser_2.login();
+
+// DOM
+
+// const element = document.getElementById('user_name');
+// console.log(element);
+
+// const elements = document.getElementsByClassName('usertag');
+// console.log(elements);
+
+// const elements = document.getElementsByTagName('p');
+// console.log(elements);
+
+//...document.querySelector()
+
+// const element = document.querySelector('#user_name');
+// console.log(element);
+
+// const elements = document.querySelectorAll('.usertag');
+// console.log(elements);
+
+// const elementp = document.querySelectorAll('p');
+// console.log(elementp);
+
+// const list = document.querySelector('#city_list');
+
+// const element_1 = document.getElementsByClassName('city');
+// const element_2 = document.querySelectorAll('.city');
+
+// console.log(list);
+// console.log(element_1);
+// console.log(element_2);
+
+// list.innerHTML += '<li class="city">Malatya</li>';
+// console.log(element_1);
+// console.log(element_2);
+
+//====================================
+
+// const elem = document.querySelector('#my_element');
+// elem.innerHTML = '<p>Hello!</p>';
+// elem.innerText = 'Merhaba';
+
+//🆚
+
+// const car_list = [
+//   { id: 0, brandName: 'Mercedes' },
+//   { id: 1, brandName: 'Kia' },
+//   { id: 2, brandName: 'BMW' },
+//   { id: 3, brandName: 'Opel' },
+// ];
+
+// const listElement = document.querySelector('#cars');
+
+// car_list.forEach((car) => {
+//   listElement.innerHTML += `<li class="car_class">${car.brandName}</li>`;
+// });
+
+//⭐⭐⭐⭐⭐⭐⭐⭐SET - GET attribute
+
+// const element = document.querySelector('#link');
+// console.log(element);
+
+// const attr = element.getAttribute('href');
+// console.log(attr);
+
+// element.setAttribute('href', 'http://www.clarusway.com');
+// element.innerText = 'go to Claruway';
+
+//exp
+
+// const elements = document.querySelectorAll('li');
+// elements.forEach((w) => {
+//   if (w.innerText.includes('error')) {
+//     w.setAttribute('class', 'error');
+//   } else if (w.innerText.includes('success')) {
+//     w.setAttribute('class', 'success');
+//   }
+// });
+
+//exp
+
+// const element = document.querySelector('.hello');
+// element.style.fontWeight = 'bold';
+
+//exp
+// const element = document.querySelector('#my_banner');
+// console.log(element.classList);
+
+// element.classList.add('active');
+// console.log(element.classList);
+
+//exp
+// const element = document.querySelector('#today');
+// const my_element = document.createElement('p');
+// my_element.innerHTML = 'Perşembe';
+// element.appendChild(my_element);
+
+//exp
+
+// document.querySelector('#btn').addEventListener('click', clickFunction);
+
+// function clickFunction() {
+//   document.querySelector('#para').innerText;
+// }
+
+//ITERaTORs
+
+//FOREACH
+
+// const numbers = [1, 2, 3, 5, 44, 4, 77, 445, 7];
+
+// numbers.forEach((x) => {
+//   console.log(x);
+// });
+
+// numbers.forEach(getnum);
+
+// function getnum(x) {
+//   console.log('number:' + x);
+// }
+
+//MAP
+
+// const newNumb = numbers.map((x) => {
+//   return x * 2;
+// });
+
+// console.log(newNumb);
+
+//FIND
+// const users = [
+//   { id: 0, name: 'ali', age: 22 },
+//   { id: 1, name: 'veli', age: 26 },
+//   { id: 2, name: 'ayşe', age: 24 },
+//   { id: 3, name: 'aslı', age: 23 },
+// ];
+
+// const myUser = users.find((user) => user.age === 22);
+
+// console.log(myUser.name);
+
+// FILTER
+// const users = [
+//   { id: 0, name: 'ali', age: 22 },
+//   { id: 1, name: 'veli', age: 26 },
+//   { id: 2, name: 'ayşe', age: 24 },
+//   { id: 3, name: 'aslı', age: 23 },
+// ];
+
+// const myUser = users.filter((x) => x.age < 24);
+// console.log(myUser.name);
+
+//map vs forEach
+
+// const ageArray_1 = [];
+// users.forEach((x) => {
+//   ageArray_1.push(x.age * 2);
+// });
+// console.log(ageArray_1);
+
+// const ageArray_2 = users.map((x) => x.age * 2);
+// console.log(ageArray_2);
+
+//REDUCE
+
+// const myArray = [1, 3, 5, 66, 7, 8, 33];
+
+// const sum = myArray.reduce((acc, curr) => {
+//   console.log(acc, curr);
+//   return acc + curr;
+// });
+
+// console.log(sum);
+
+// const big = myArray.reduce((acc, curr) => {
+//   return acc > curr ? acc : curr;
+// });
+// console.log(big);
+
+// EVERY , SOME
+
+// const users = [
+//   { id: 0, isOld: true, name: 'ali', age: 22 },
+//   { id: 1, isOld: false, name: 'veli', age: 26 },
+//   { id: 2, isOld: true, name: 'ayşe', age: 24 },
+//   { id: 3, isOld: true, name: 'aslı', age: 23 },
+// ];
+
+// console.log(users.every((x) => x.isOld === true));
+// console.log(users.some((x) => x.isOld === true));
+
+//for..in vs for..of
+
+// const user = {
+//   id: 0,
+//   isOld: true,
+//   name: 'ali',
+//   age: 22,
+// };
+
+// for (x in user) {
+//   console.log(x, user[x]);
+// }
+
+// const users = [
+//   { id: 0, isOld: true, name: 'ali', age: 22 },
+//   { id: 1, isOld: false, name: 'veli', age: 26 },
+//   { id: 2, isOld: true, name: 'ayşe', age: 24 },
+//   { id: 3, isOld: true, name: 'aslı', age: 23 },
+// ];
+
+// for (x of users) {
+//   console.log(x);
+// }
+
+// for (y of user) {
+//   console.log(y);
+// }
